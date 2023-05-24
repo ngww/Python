@@ -20,7 +20,7 @@ print(mixed[-1])                         # Output: 3.14
 # Modifying list elements
 fruits[1] = "grape"                      # Modifying an element
 numbers.append(6)                        # Appending an element at the end
-mixed.insert(1, "orange")                 # Inserting an element at a specific index
+mixed.insert(1, "orange")                # Inserting an element at a specific index
 
 # Slicing a list
 print(numbers[1:4])                      # Output: [2, 3, 4]
