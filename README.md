@@ -20,5 +20,5 @@ My Python Projects. I published these mini projects directly from visual studio 
 [Date and Time](Intro_To_Python/Theory/05_Date_Time.md)</br>
 [Parsing Date](Intro_To_Python/Theory/06_Parse_Date.md)</br>
 [OS Services in Python](Intro_To_Python/Theory/07_OS_Service.md)</br>
-[Parsing Date](Intro_To_Python/Theory/06_Parse_Date.md)</br>
-[Parsing Date](Intro_To_Python/Theory/06_Parse_Date.md)</br>
+[Regular Expressions](Intro_To_Python/Theory/08_Regular_Expressions.md)</br>
+[](Intro_To_Python/Theory/)</br>
