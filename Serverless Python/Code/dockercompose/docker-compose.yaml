@@ -1,0 +1,39 @@
+version: '3.1'
+
+services:
+
+  #CODE2.0:
+  #configure the upstream NGINX reverse proxy container and mount the nginx.conf file
+  #see - https://docs.docker.com/compose/compose-file/
+  nginx:
+    image: nginx:1.13.7
+    container_name: nginx
+    depends_on:
+      - flask
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    networks:
+      - cloudacademy
+    ports:
+      - 80:80
+
+  #CODE2.1:
+  #configure the downstream FLASK application container and configure environment vars
+  #see - https://docs.docker.com/compose/compose-file/
+  flask:
+    image: cloudacademydevops/flaskapp:latest
+    container_name: flask
+    environment:
+      - FLASK_APP=/corp/app/main.py
+      - APP_NAME=CloudAcademy.DevOps.DockerCompose
+    command: flask run --host=0.0.0.0
+    networks:
+      cloudacademy:
+        aliases:
+          - flask-app
+    ports:
+      - 5000:5000
+
+networks:
+  cloudacademy:
+    driver: bridge
